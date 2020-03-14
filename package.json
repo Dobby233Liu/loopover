@@ -11,19 +11,20 @@
     "chart.js": "^2.9.3",
     "idb": "^5.0.1",
     "normalize.css": "^8.0.1",
-    "register-service-worker": "^1.6.2",
+    "register-service-worker": "^1.7.0",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.0",
-    "vue-class-component": "^7.2.2",
+    "vue-class-component": "^7.2.3",
+    "vue-i18n": "^8.15.5",
     "vue-property-decorator": "^8.4.0"
   },
   "devDependencies": {
-    "@types/chart.js": "^2.9.13",
+    "@types/chart.js": "^2.9.15",
     "@vue/cli-plugin-babel": "^4.2.2",
     "@vue/cli-plugin-pwa": "^4.2.2",
     "@vue/cli-plugin-typescript": "^4.2.2",
     "@vue/cli-service": "^4.2.2",
-    "typescript": "^3.7.5",
+    "typescript": "^3.8.3",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [

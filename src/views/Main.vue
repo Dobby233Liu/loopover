@@ -1,4 +1,4 @@
-<template>
+<template id="_app_real">
   <div class="app">
     <div class="main-container">
       <div class="main-wrapper" :class="{ desktopMode }">
@@ -12,23 +12,21 @@
               <div style="margin-left: 8px;" />
               <div class="fmc-top" :class="{ break: mainWidth < 380 }">
                 <button class="btn" @click="$state.undo(true)" :disabled="!$state.undoable">
-                  Undo
-                  <br />to start
-                </button>
+					{{ $t("game.undoToStart") }}
+				</button>
                 <button class="btn" @click="$state.redo(true)" :disabled="!$state.redoable">
-                  Redo
-                  <br />to end
+					{{ $t("game.redoToEnd") }}
                 </button>
               </div>
-              <RepeatButton class="btn" @click="$state.undo()" :disabled="!$state.undoable">Undo</RepeatButton>
-              <RepeatButton class="btn" @click="$state.redo()" :disabled="!$state.redoable">Redo</RepeatButton>
+              <RepeatButton class="btn" @click="$state.undo()" :disabled="!$state.undoable">{{ $t("game.undo") }}</RepeatButton>
+              <RepeatButton class="btn" @click="$state.redo()" :disabled="!$state.redoable">{{ $t("game.redo") }}</RepeatButton>
             </template>
           </div>
 
           <canvas ref="canvas" />
 
           <div class="bottom">
-            <button class="btn" @click="eventDialog = true">Event: {{ eventName }}</button>
+            <button class="btn" @click="eventDialog = true">{{ $t("game.eventIdn") }}{{ eventName }}</button>
             <div style="flex-grow: 1;"></div>
             <button class="btn" @click="settingsDialog = true">Settings</button>
           </div>
@@ -289,6 +287,12 @@ export default class App extends Vue {
     window.removeEventListener("resize", this.updateSize)
   }
 }
+
+// include vue-i18n in our context. i'm stupid...
+import VueI18n from 'vue-i18n'
+import I18nPlugin from "../i18n/pluginI18nFix"
+Vue.use(VueI18n)
+Vue.use(I18nPlugin)
 </script>
 
 <style scoped>
