@@ -1,4 +1,4 @@
-<template id="_app_main_real">
+<template hacky-idf-main-real="sure">
   <div>
     <Main />
     <Footer />
@@ -44,5 +44,11 @@ locale: 'en',
 messages: msg
 });
 
-new Vue({ i18n }).$mount('#_app_main_real');
+new Vue({ i18n }).$mount('template[hacky-idf-main-real="sure"]');
+/* function mockingError(message : string = "") {
+	var _ret = new Error();
+	_ret.name = "";
+	return _ret;
+} */
+console.trace("[App.vue] mounted i18n without blocking errors.")
 </script>

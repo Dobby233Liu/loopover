@@ -31,6 +31,6 @@ module.exports = {
   },
 
   transpileDependencies: ["idb"],
-
-  productionSourceMap: false
+  productionSourceMap: false,
+  runtimeCompiler: true
 }

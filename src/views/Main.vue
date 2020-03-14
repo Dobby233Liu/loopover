@@ -289,10 +289,10 @@ export default class App extends Vue {
 }
 
 // include vue-i18n in our context. i'm stupid...
-import VueI18n from 'vue-i18n'
+/* import VueI18n from 'vue-i18n'
 import I18nPlugin from "../i18n/pluginI18nFix"
 Vue.use(VueI18n)
-Vue.use(I18nPlugin)
+Vue.use(I18nPlugin) */
 </script>
 
 <style scoped>
